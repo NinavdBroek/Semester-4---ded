@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onze countdown</title>
+</head>
+<body>
+<h1 id="aantalDagen">spannendhoor</h1>
+
+
+
+<script>
+    var eindDatum = new Date(2020, 3, 20);
+
+    setInterval(refreshTijd, 1000);
+    function refreshTijd() {
+
+
+        var today = new Date();
+
+        var verschil = eindDatum - today;
+        var seconden = verschil / 1000;
+        var minuten = seconden / 60;
+        var uren = minuten / 60;
+        var dagen = uren / 24;
+        document.getElementById('aantalDagen').innerHTML = dagen;
+
+    }
+
+</script>
+
+</body>
+</html>
